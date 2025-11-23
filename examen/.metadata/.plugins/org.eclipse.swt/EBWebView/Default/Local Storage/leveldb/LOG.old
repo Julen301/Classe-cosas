@@ -1,2 +1,3 @@
-2025/11/22-13:11:38.674 6934 Creating DB C:\Users\julen\Desktop\GitHub\Classe-cosas\examen\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb since it was missing.
-2025/11/22-13:11:38.708 6934 Reusing MANIFEST C:\Users\julen\Desktop\GitHub\Classe-cosas\examen\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/11/22-13:11:47.961 78e0 Reusing MANIFEST C:\Users\julen\Desktop\GitHub\Classe-cosas\examen\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/11/22-13:11:47.966 78e0 Recovering log #3
+2025/11/22-13:11:47.968 78e0 Reusing old log C:\Users\julen\Desktop\GitHub\Classe-cosas\examen\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/000003.log 

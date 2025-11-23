@@ -75,7 +75,7 @@ public class Activitat_5_Tresen_Java {
 		while (!juegoTerminado) { //vascamente mienstas el juego no este terminado esto se repetira hasta que uno de los dos gano o empate
 			mostrartablero(tablero);
 			
-			System.out.println("Turno de el jugadro " + jugadroActual); // ✅ CORREGIDO: era System.err
+			System.out.println("Turno de el jugadro " + jugadroActual);
 			
 			boolean movimentoValido = false; // esto hara que si el jugadro a eligido la casilla correcta
 			
@@ -110,7 +110,7 @@ public class Activitat_5_Tresen_Java {
 				}
 			}
 		}
-		scanner.close(); // ✅ AÑADIDO: Cerrar el scanner
+		
 	}
 	
 	public static void iniciatablero(char[][] tablero){
@@ -130,7 +130,7 @@ public class Activitat_5_Tresen_Java {
 			for (int j = 0; j<3; j++) {
 				System.out.print(tablero[i][j]);
 				if(j<2) {  // esto lo que hace es que si no es la  ultima columna va imprimer la varra |
-					System.out.print(" | "); // ✅ CORREGIDO: println → print
+					System.out.print(" | ");
 				}
 			}
 			
