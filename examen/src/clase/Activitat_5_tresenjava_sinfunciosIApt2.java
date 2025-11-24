@@ -54,8 +54,6 @@ public class Activitat_5_tresenjava_sinfunciosIApt2 {
 	            int fila = 0;
 	            int columna = 0;
 	            
-	            
-	            
 	        if(jugadorActual == jugadorHumano) {
                 	System.out.println("tu turno");
                 	
@@ -82,24 +80,32 @@ public class Activitat_5_tresenjava_sinfunciosIApt2 {
 	            }else {
 	            	System.out.println("turno del bot");
 	            	boolean movimientoRealizado = false;
-	            	
-	            	
+	            	while (!movimientoRealizado) {
+	            		fila = random.nextInt(3);
+	            		columna = random.nextInt(3);
+	            		
+	            		if(tablero[fila][columna] == '-') {
+	            			tablero[fila][columna] = jugadorIA;
+	            			System.out.println("el bot puso en " + fila + "," + columna);
+	            			movimientoRealizado = true;
+	            		}
+	            	}
 	            }     
 	            boolean gano = false;
-	                       
+	                       //esto verifica las 3 filas
 	            for (int i = 0; i < 3; i++) {
 	                if (tablero[i][0] == jugadorActual && tablero[i][1] == jugadorActual && tablero[i][2] == jugadorActual) {
 	                    gano = true;
 	                }
-	            }
+	            }			//esto verifica las 3 columnas
 	            for (int j = 0; j < 3; j++) {
 	                if (tablero[0][j] == jugadorActual && tablero[1][j] == jugadorActual &&  tablero[2][j] == jugadorActual) {
 	                    gano = true;
 	                }
-	            }
+	            }		//verifica la diagonal
 	            if (tablero[0][0] == jugadorActual &&  tablero[1][1] == jugadorActual &&  tablero[2][2] == jugadorActual) {
 	                gano = true;
-	            }
+	            }	// verificaladigonal invertida
 	            if (tablero[0][2] == jugadorActual && tablero[1][1] == jugadorActual && tablero[2][0] == jugadorActual) {
 	                gano = true;
 	            }
@@ -118,7 +124,7 @@ public class Activitat_5_tresenjava_sinfunciosIApt2 {
 	                        System.out.println("  ---------");
 	                    }
 	                }
-	                System.out.println("\n¡Felicidades! ¡El jugador " + jugadorActual + " ha ganado!");
+	                System.out.println("¡Felicidades! ¡El jugador " + jugadorActual + " ha ganado!");
 	                juegoTerminado = true;
 	            } else {
 	                boolean lleno = true;
@@ -144,13 +150,13 @@ public class Activitat_5_tresenjava_sinfunciosIApt2 {
 	                            System.out.println("  ---------");
 	                        }
 	                    }
-	                    System.out.println("\n¡Es un empate! El tablero está lleno.");
+	                    System.out.println("Es un empate! El tablero está lleno.");
 	                    juegoTerminado = true;
 	                } else {
-	                    if (jugadorActual == 'x') {
-	                        jugadorActual = 'o';
+	                    if (jugadorActual == 'X') {
+	                        jugadorActual = 'O';
 	                    } else {
-	                        jugadorActual = 'x';
+	                        jugadorActual = 'X';
 	                    }
 	                }
 	            }
