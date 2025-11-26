@@ -52,10 +52,7 @@ public class Activitat_5_Tresen_Java {
 	 	 * 
 	 	 * sobretodo las funcions de tipo void i tipo boolena 
 	 	 * void solo hace algo como mostrar iniializar 
-	 	 * en cambio boolean responde a una pregunta tollo esvalido gano esta lleno etc
-	 	 * 
-	 	 * como lo distribuje
-	 	 * 
+	 	 * en cambio boolean responde a una pregunta rollo esvalido gano esta lleno etc
 	 	 * 
 		 */
 		
@@ -86,22 +83,27 @@ public class Activitat_5_Tresen_Java {
 				System.out.println("ingresa la columna (0-2); ");
 				int columna = scanner.nextInt();
 				
-				if(esMovimientoValido(tablero, fila, columna)) {
-					tablero[fila][columna] = jugadroActual;
-					movimentoValido = true;
-				}else {
+				if(esMovimientoValido(tablero, fila, columna)) { // esto verificalas cordenad llanndo a la funcion 
+					//si la funcions da true signifaca que esta dentro del rango (0-2) es decir que se puede usar en culaquier casilla
+					tablero[fila][columna] = jugadroActual; // aqui se realiza el moviemtno dentro del tablero
+					movimentoValido = true; //al pasrse a true el bucle interior se acaba y pasa a la siginte parte  
+				}else { // si devuelte false es que la posicion esta fuera del rando de (0-2)
 					System.out.println("mavimiento no valido dale otro intento bot");
 				}
 			}
+			
 			//esot va a verificas si el jugador actual gano
 			if(verificarGanador(tablero, jugadroActual)) {
 				mostrartablero(tablero);
 				System.out.println("has gandor" + jugadroActual);
 				juegoTerminado = true;  // esto hara que al ganar el while principal se detenga 
-			}else if (tableroLleno(tablero))  { // si no ay un ganador se dara el empate 
+				
+			}else if (tableroLleno(tablero))  { // si no gano se verifica que el tablero esta completamente lleno es decir un empate
 				mostrartablero(tablero);
 				System.out.println("Es un empate");
-				juegoTerminado = true;
+				juegoTerminado = true; // el juego termina y el bucle principal acabo 
+				
+				//si no gana nadie o hay en empate el juego continuara 
 			}else {
 				if(jugadroActual == 'x') { // si el jugador acual es 'x' cambiamos a 'o'
 					jugadroActual = 'o';
@@ -146,7 +148,7 @@ public class Activitat_5_Tresen_Java {
 		if(fila < 0 || fila > 2 || columna <0 || columna > 2) {
 			return false; // esto es que el movimento es invaildo
 		}
-		//esto es lo mismo si la colaman es monor que 0 o mayor que 2 sera invalido
+		
 		if(tablero[fila][columna] != '-') {  // vasicamente != '-' (!= / esto significa diferente de) si la casilla es es - es significa que esta ocupada
 			return false;
 		}

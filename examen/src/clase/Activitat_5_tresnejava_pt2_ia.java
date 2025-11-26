@@ -71,10 +71,12 @@ public class Activitat_5_tresnejava_pt2_ia {
 				   System.out.println("la ia gano mejora bot");
 			   }
 			   juegoTerminado = true; // al ganar hce el el bucle principal se detenga
+			   
 		   }else if (tableroLleno(tablero)) {
 			   mostrartablero(tablero);
 			   System.out.println("empate");
 			   juegoTerminado = true;
+			   
 		   }else {
 			   if(jugadorActual == jugadorHumano) {
 				   jugadorActual = jugadorIa;
