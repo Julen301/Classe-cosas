@@ -28,8 +28,11 @@ public class s3 {
 		}
 		System.out.println("letras " + letras);
 		System.out.println(("espacios " + espacios));
- 		
-		
+ 		int fila ;
+		//+++
+		for(int i =0;i<3;i++) {
+			if(matriz[1][i])
+		}
 		
 	}
 
